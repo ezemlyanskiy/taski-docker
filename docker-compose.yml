@@ -28,6 +28,9 @@ services:
 
   gateway:
     build: ./gateway/
+    depends_on:
+      - backend
+      - frontend
     volumes:
       - static:/staticfiles
     ports:

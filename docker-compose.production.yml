@@ -28,6 +28,9 @@ services:
 
   gateway:
     image: ezemlyanskiy/taski_gateway
+    depends_on:
+      - backend
+      - frontend
     volumes:
       - static:/staticfiles
     ports:
